@@ -1,0 +1,135 @@
+body,input, button {
+    font-family:Noto Sans KR, Nanum Barun Gothic, '나눔바른고딕', sans-serif; 
+    color:#505050; 
+    font-weight:300;
+}
+body,div,dl,dt,h4,input,button {
+    margin:0; 
+    padding:0; 
+    outline:none; 
+    word-break:keep-all; 
+    -webkit-text-size-adjust:none; 
+    border:0;
+}
+input[type="password"], input[type="text"] {
+    border:1px solid #ddd; 
+    height:38px; 
+    line-height:38px; 
+    text-indent:12px; 
+    width:100%; 
+    font-size:14px;}
+dl {
+    list-style:none; 
+    border:none; 
+}
+h4 {
+    font-size:30px;
+}
+span {
+    font-weight: 400;
+}
+hr {
+    width : 30%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing:0;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.mainbox{
+    display: flex;
+    justify-content: space-around;
+    line-height: 30px;
+    position:relative;
+}
+.box_left {
+    display: inline-block;
+    padding: 50px 60px;
+}
+.bl_img {
+    display : inline-block; 
+    padding:10px;
+}
+.bl_con {
+    margin-top:10px;
+    padding: 10px; 
+}
+.box_right {
+    display : inline-block; 
+    padding: 40px 50px;
+}
+.br_top {
+    border: 1px solid #ebebeb; 
+    padding:10px;
+    position: relative;
+}
+.br_but {
+    margin-top:50px;
+    border: 1px solid #ebebeb;
+    padding: 10px; 
+    position: relative;
+    top: -10px;
+}
+dt {
+font-size:21px;
+font-weight:bold;}
+dl {
+margin-left: 20px;font-size:18px;font-weight:400;
+}
+a.button{
+    display: inline-block;
+    background-color: #3c81f6 ;
+    color: white;
+    padding: 9px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 0.25em;
+    text-decoration: none;
+}
+input {
+    width: 100%;
+    padding: 12px ;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align:middle; 
+    -webkit-appearance:none; 
+    -webkit-border-radius:0;
+}
+header {
+    background-image: url('/public/images/background.jpg');
+    z-index: 2;
+    max-width: 100%; 
+    position:static; 
+    display: inline-block;
+    color: #ffffff;
+    background-color: #0D0F13;
+    padding: 12px;
+    font-weight: 300;
+    word-break: keep-all;
+    width:100%;
+}
+header b {
+    opacity: 0.8;
+}
+footer {
+    position:relative; 
+    z-index:4; 
+    background:white; 
+    border-top:1px solid #bfbfbf;
+    border:0;
+}

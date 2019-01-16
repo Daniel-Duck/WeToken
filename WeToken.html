@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>We Token ICO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/WeToken.css"></link>
+
+<header> 
+
+<h4><b>We Token</b></h4>
+<h4 id = "append"><b>Initial Coin Offering</b></h4>
+<a button onClick="killcontract()" class ="button" id = "kill"><b>contract 파괴하기</b></a><br />
+<input type="text" class = "info" id="withdrawWT" value placeholder="인출할 토큰 수">
+<a button onClick="withdraw()" class ="button" id = "withdrawButton"><b>인출 하기</b></a> 
+</header>
+
+<body>
+<div class = "mainbox" >
+<div class="box_left">
+    <div class="bl_img">
+        <img src="/public/images/Ethereum.png" width="400px">
+    </div>
+   <div class="bl_con">
+        <dt >ICO 시작 시간:</dt>
+        <dl class="times" id="salesStart">0</dl>
+        <dt >ICO 종료 시간:</dt> 
+        <dl class="times" id="deadline">0</dl>
+        
+        <dt > We Token 현재 판매량/ 재고 : </dt>
+        <dl>
+        <span id="totalSaleVolume">0 WT </span> (<span id="toEther">0 ETHER</span> Ether) / <span id="balanceWT">0 WT</span>
+        <a button onClick="balanceOfWT()" class ="button"><b>새로고침</b></a> 
+        </dl>
+        
+        <dt> WeToken 주소: </dt>
+        <dl id="contractAddress"></dl>
+        <dt>WeToken 구매하기: </dt>
+        <input type="text" class = "info" id="amountWT" value placeholder="구매할 토큰 수">
+        <a button onClick="buyToken()" class ="button"><b>구매 하기</b></a>     
+        <a button onClick="refunds()" class ="button"><b>환불 하기</b></a>
+   </div>
+</div>
+
+
+<div class = "box_right">
+    <div class = "br_top">
+        <dt>Keystore file</dt>
+        <input id = "wallet" type="file" >
+
+        <dt> Password </dt>
+        <input type="password" class = "info" id="password" value placeholder="비밀 번호">
+        <a button onClick="myWallet()" class ="button"><b>Import keystore file</b></a>
+        <a button onClick="CreateWallet()" class ="button"><b>Create keystore file</b></a>
+    </div>
+    <div class="br_but">
+    <dt>현재 활성화된 계정:</dt><span id="myAccount"> </span> 
+    <dt>WeToken 잔고:</dt><span id="myBalance"> </span>
+    <a button onClick="balanceOf()" class ="button"><b>새로고침</b></a>
+
+    <dt>WeToken 송금하기: </dt>
+    <input type="text" class = "info" id="toAccount" value placeholder="보낼 주소 ">
+    <input type="text" class = "info" id="amount"   value placeholder="보낼 Token 개수 ">
+    <input type="text" class = "info" id="gasPrice"   value placeholder="Gas Price(wei)">
+    <a button onClick="transfer()" class ="button"><b>송금 하기</b></a>
+    <a button onClick="historyViewer()" class="button" href="#ht"><b>거래내역 확인</b></a>
+    </div>
+</div>
+
+</div>
+
+<footer name="ht">
+<span class = "box_right"> 
+   <table id="historyTable"> </table>
+</span>
+</footer>
+ </body>
+
+ 
+<script type="text/javascript" src="./public/javascripts/web3.js"></script>
+<script type="text/javascript" src="./public/javascripts/WeToken.js"></script>
+<script type="text/javascript" src="./public/javascripts/WeTokenABI.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+        init();
+</script>
+</html>
+
+
+
